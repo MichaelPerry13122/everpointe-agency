@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everpointe — Agency Business Model</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #07090f;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+    .node {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .node:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .auto-tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: rgba(6,182,212,0.1);
+      color: #22d3ee;
+      border: 1px solid rgba(6,182,212,0.2);
+      margin-top: 6px;
+    }
+    .future-tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: rgba(107,114,128,0.15);
+      color: #6b7280;
+      border: 1px solid rgba(107,114,128,0.2);
+      margin-top: 6px;
+    }
+    .stage-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #374151;
+      font-size: 22px;
+      margin: 6px 0;
+    }
+    .section-divider {
+      border: none;
+      border-top: 1px solid #111827;
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+  <div style="max-width: 960px; margin: 0 auto;">
+
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom: 52px;">
+      <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#4b5563; margin-bottom:10px;">EVERPOINTE</div>
+      <h1 style="font-size:30px; font-weight:800; color:#f8fafc; margin:0 0 10px;">Agency Business Model</h1>
+      <p style="color:#6b7280; font-size:14px; margin:0;">Rank &amp; Rent Lead Generation — Full Funnel &amp; Automation Map</p>
+    </div>
+
+    <!-- ── STAGE 1: LEAD SOURCES ── -->
+    <div class="stage-label" style="color:#60a5fa;">① Lead Sources</div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
+
+      <div class="node" style="background:#0d1829; border:1px solid #1e3a5f; border-radius:14px; padding:18px; text-align:center;">
+        <div style="font-size:26px; margin-bottom:8px;">🌱</div>
+        <div style="font-weight:700; font-size:13px; color:#93c5fd;">Organic Inbound</div>
+        <div style="font-size:11px; color:#4b6080; margin-top:5px; line-height:1.5;">Own website, SEO &amp; Instagram</div>
+        <span class="auto-tag">🤖 SEO automation</span>
+      </div>
+
+      <div class="node" style="background:#0d1829; border:1px solid #1e3a5f; border-radius:14px; padding:18px; text-align:center;">
+        <div style="font-size:26px; margin-bottom:8px;">📱</div>
+        <div style="font-weight:700; font-size:13px; color:#93c5fd;">Meta Ads</div>
+        <div style="font-size:11px; color:#4b6080; margin-top:5px; line-height:1.5;">Paid inbound leads from ads</div>
+        <span class="future-tag">future</span>
+      </div>
+
+      <div class="node" style="background:#0d1829; border:1px solid #1e3a5f; border-radius:14px; padding:18px; text-align:center;">
+        <div style="font-size:26px; margin-bottom:8px;">📞</div>
+        <div style="font-weight:700; font-size:13px; color:#93c5fd;">Voicemail Drops</div>
+        <div style="font-size:11px; color:#4b6080; margin-top:5px; line-height:1.5;">Ringless VM via Dropcowboy</div>
+        <span class="auto-tag">🤖 automated nightly</span>
+      </div>
+
+      <div class="node" style="background:#0d1829; border:1px solid #1e3a5f; border-radius:14px; padding:18px; text-align:center;">
+        <div style="font-size:26px; margin-bottom:8px;">✉️</div>
+        <div style="font-weight:700; font-size:13px; color:#93c5fd;">Email Outreach</div>
+        <div style="font-size:11px; color:#4b6080; margin-top:5px; line-height:1.5;">Personalized cold campaign</div>
+        <span class="auto-tag">🤖 automated</span>
+      </div>
+
+    </div>
+
+    <!-- Arrow -->
+    <div class="arrow">↓</div>
+
+    <!-- ── STAGE 2: CRM ── -->
+    <div class="stage-label" style="color:#a78bfa;">② Pipeline — Notion CRM</div>
+    <div class="node" style="background:#100d1f; border:1px solid #4c1d95; border-radius:14px; padding:22px 28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <div>
+        <div style="font-weight:800; font-size:15px; color:#c4b5fd;">📋 Notion CRM</div>
+        <div style="font-size:12px; color:#5b4e8a; margin-top:5px;">All sources consolidated · Filter by status, niche, city, source</div>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <span class="auto-tag">🤖 auto-populated nightly via Python</span>
+        <span class="auto-tag">🤖 CallRail webhook → auto-update</span>
+        <span class="auto-tag">🤖 email replies → auto-update</span>
+      </div>
+    </div>
+
+    <!-- Arrow -->
+    <div class="arrow">↓</div>
+
+    <!-- ── STAGE 3: OUTREACH ── -->
+    <div class="stage-label" style="color:#fbbf24;">③ Outreach &amp; Trust Building</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+
+      <div class="node" style="background:#120e00; border:1px solid #78350f; border-radius:14px; padding:20px;">
+        <div style="font-size:22px; margin-bottom:8px;">📲</div>
+        <div style="font-weight:700; font-size:13px; color:#fde68a;">Cold Call Pivot Script</div>
+        <div style="font-size:11px; color:#8a6020; margin-top:8px; line-height:1.6;">
+          Start as a fake service inquiry lead →<br>
+          Pivot: "I already have a job for you" →<br>
+          Offer free leads → Book zoom call
+        </div>
+      </div>
+
+      <div class="node" style="background:#120e00; border:1px solid #78350f; border-radius:14px; padding:20px;">
+        <div style="font-size:22px; margin-bottom:8px;">🎯</div>
+        <div style="font-weight:700; font-size:13px; color:#fde68a;">Pre-Zoom Bait Generation</div>
+        <div style="font-size:11px; color:#8a6020; margin-top:8px; line-height:1.6;">
+          Run Meta/Google ads 1–2 days before zoom →<br>
+          Generate real leads in their area →<br>
+          Send leads before call to build trust
+        </div>
+        <span class="future-tag">future automation</span>
+      </div>
+
+    </div>
+
+    <!-- Arrow -->
+    <div class="arrow">↓</div>
+
+    <!-- ── STAGE 4: ZOOM ── -->
+    <div class="stage-label" style="color:#818cf8;">④ Zoom Discovery &amp; Close</div>
+    <div class="node" style="background:#0c0f22; border:1px solid #312e81; border-radius:14px; padding:24px; text-align:center;">
+      <div style="font-size:32px; margin-bottom:10px;">🎥</div>
+      <div style="font-weight:800; font-size:16px; color:#a5b4fc;">Zoom Call — Closing Framework</div>
+      <div style="font-size:12px; color:#3730a3; margin-top:8px; line-height:1.7;">
+        Pitch <strong style="color:#6366f1;">lead flow</strong>, not a website · Position as renting the lead pipeline<br>
+        One contractor per market · You own the site asset permanently
+      </div>
+    </div>
+
+    <!-- Fork labels -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:960px; margin: 10px auto 0;">
+      <div style="text-align:center; font-size:11px; color:#4b5563;">✅ Closed on retainer</div>
+      <div style="text-align:center; font-size:11px; color:#4b5563;">⚠️ Resistant / objection</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <div class="arrow">↓</div>
+      <div class="arrow">↓</div>
+    </div>
+
+    <!-- ── STAGE 5: TWO PATHS ── -->
+    <div class="stage-label" style="color:#34d399;">⑤ Client Path</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+      <!-- Path A: Rank & Rent -->
+      <div class="node" style="background:#031a0e; border:1px solid #065f46; border-radius:14px; padding:22px;">
+        <div style="font-size:22px; margin-bottom:8px;">🏆</div>
+        <div style="font-weight:800; font-size:14px; color:#6ee7b7;">PATH A — Rank &amp; Rent Retainer</div>
+        <div style="font-size:12px; color:#065f46; margin-top:4px;">Primary offer</div>
+        <div style="font-size:11px; color:#4b8a6a; margin-top:12px; line-height:1.8;">
+          💰 $700–$1,500/month MRR<br>
+          🤖 Site built in ~15 min (template)<br>
+          🤖 SEO automation handles ranking<br>
+          📞 CallRail tracking on site<br>
+          📩 Leads auto-routed to client<br>
+          🏛️ You own the asset permanently<br>
+          🔄 Churn → sell to competitor instantly
+        </div>
+      </div>
+
+      <!-- Path B: Downsell -->
+      <div class="node" style="background:#130f00; border:1px solid #92400e; border-radius:14px; padding:22px;">
+        <div style="font-size:22px; margin-bottom:8px;">💡</div>
+        <div style="font-weight:800; font-size:14px; color:#fde68a;">PATH B — Site Build Downsell</div>
+        <div style="font-size:12px; color:#92400e; margin-top:4px;">Objection handler / consolation</div>
+        <div style="font-size:11px; color:#8a6a3a; margin-top:12px; line-height:1.8;">
+          💵 $500–$900 one-time payment<br>
+          🤖 Site built in ~15 min (template)<br>
+          📞 CallRail number added to site<br>
+          🤝 Hand over site to client<br>
+          📊 Track calls for 30–60 days<br>
+          🔄 Follow up with data → upsell to R&amp;R<br>
+          ✅ If no upsell, still collected the fee
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arrows -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <div class="arrow">↓</div>
+      <div class="arrow" style="flex-direction:column; gap:0; font-size:11px; color:#6b7280;">
+        <span style="font-size:20px; color:#374151;">↓</span>
+        <span>30–60 days later</span>
+      </div>
+    </div>
+
+    <!-- ── STAGE 6: OUTCOMES ── -->
+    <div class="stage-label" style="color:#f472b6;">⑥ Outcomes</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+      <!-- MRR -->
+      <div class="node" style="background:linear-gradient(140deg, #031a0e, #052e16); border:1px solid #10b981; border-radius:14px; padding:24px; text-align:center;">
+        <div style="font-size:32px; margin-bottom:10px;">💰</div>
+        <div style="font-weight:800; font-size:16px; color:#6ee7b7;">MRR Stack</div>
+        <div style="font-size:13px; color:#34d399; margin-top:8px;">$700–$1,500 × # of clients</div>
+        <div style="font-size:11px; color:#065f46; margin-top:8px; line-height:1.6;">Passive. Scalable. Asset-backed.<br>Stack markets, stack income.</div>
+      </div>
+
+      <!-- Follow-up loop -->
+      <div class="node" style="background:#130c00; border:1px solid #b45309; border-radius:14px; padding:24px; text-align:center;">
+        <div style="font-size:32px; margin-bottom:10px;">🔄</div>
+        <div style="font-weight:800; font-size:16px; color:#fde68a;">Upsell Follow-Up Loop</div>
+        <div style="font-size:13px; color:#f59e0b; margin-top:8px;">Show CallRail data → pitch R&amp;R</div>
+        <div style="font-size:11px; color:#78350f; margin-top:8px; line-height:1.6;">Site already built &amp; ranking →<br>warm prospect → loops back to pipeline</div>
+      </div>
+
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- ── AUTOMATION STACK ── -->
+    <div class="stage-label" style="color:#22d3ee;">🤖 Automation Stack</div>
+    <div class="node" style="background:#080d18; border:1px solid #164e63; border-radius:14px; padding:28px;">
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+
+        <div>
+          <div style="font-weight:700; font-size:12px; color:#22d3ee; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">Prospecting</div>
+          <div style="font-size:11px; color:#6b7280; line-height:1.8;">
+            Python + Google Places API<br>
+            → Scrapes name, phone, owner<br>
+            → Dumps to Notion CRM nightly<br>
+            <span class="auto-tag" style="margin-top:4px;">Cowork scheduled task</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:700; font-size:12px; color:#22d3ee; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">Outreach</div>
+          <div style="font-size:11px; color:#6b7280; line-height:1.8;">
+            Dropcowboy ringless voicemails<br>
+            Personalized email campaign<br>
+            Chrome connector → Dropcowboy<br>
+            <span class="auto-tag" style="margin-top:4px;">Cowork scheduled task</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:700; font-size:12px; color:#22d3ee; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">CRM Updates</div>
+          <div style="font-size:11px; color:#6b7280; line-height:1.8;">
+            CallRail webhook → Cloudflare Worker<br>
+            → Notion status update (called back)<br>
+            Gmail replies → Notion update<br>
+            <span class="auto-tag" style="margin-top:4px;">Real-time, no Make/Zapier needed</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:700; font-size:12px; color:#22d3ee; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">Site Building</div>
+          <div style="font-size:11px; color:#6b7280; line-height:1.8;">
+            WordPress + Hostinger template<br>
+            Claude Code → ~15 min per site<br>
+            CallRail number auto-assigned<br>
+            <span class="auto-tag" style="margin-top:4px;">Semi-automated via Claude Code</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:700; font-size:12px; color:#22d3ee; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">SEO &amp; Ranking</div>
+          <div style="font-size:11px; color:#6b7280; line-height:1.8;">
+            Content automation TBD<br>
+            Schema markup, GMB optimization<br>
+            Citation building pipeline<br>
+            <span class="future-tag" style="margin-top:4px;">roadmap</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight:700; font-size:12px; color:#22d3ee; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.08em;">Client Delivery</div>
+          <div style="font-size:11px; color:#6b7280; line-height:1.8;">
+            CallRail routes leads to client<br>
+            Monthly reporting (automated)<br>
+            Churn → swap contractor, keep asset<br>
+            <span class="auto-tag" style="margin-top:4px;">Mostly passive once live</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align:center; margin-top:48px; font-size:11px; color:#1f2937;">
+      Everpointe Agency · Built with Claude + Cowork · v1
+    </div>
+
+  </div>
+</body>
+</html>
